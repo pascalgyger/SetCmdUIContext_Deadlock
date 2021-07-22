@@ -55,11 +55,12 @@ namespace VSIXProject4
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             await ToolWindow1Command.InitializeAsync(this);
 
-            await SetCustomContextAsync(this, true);
+            SetCustomContextAsync(this, true).FileAndForget("blub");
         }
 
         public async Task SetCustomContextAsync(AsyncPackage package, bool enable)
         {
+            await Task.Delay(3000);
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
             IVsMonitorSelection svc = await package.GetServiceAsync(typeof(IVsMonitorSelection)) as IVsMonitorSelection;
