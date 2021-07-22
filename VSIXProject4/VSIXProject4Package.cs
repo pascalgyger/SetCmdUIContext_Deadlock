@@ -26,12 +26,12 @@ namespace VSIXProject4
     /// </para>
     /// </remarks>
     /// 
-    [ProvideAutoLoad(UIContextGuids80.SolutionExists, PackageAutoLoadFlags.BackgroundLoad)]
+    [ProvideAutoLoad(UIContextGuids80.NoSolution, PackageAutoLoadFlags.BackgroundLoad)]
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(VSIXProject4Package.PackageGuidString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(ToolWindow1))]
-    [ProvideToolWindowVisibility(typeof(ToolWindow1), PackageGuids.TrioSolutionContextString)]
+    [ProvideToolWindowVisibility(typeof(ToolWindow1), PackageGuids.CustomContextString)]
     public sealed class VSIXProject4Package : AsyncPackage
     {
         /// <summary>
@@ -64,7 +64,7 @@ namespace VSIXProject4
 
             IVsMonitorSelection svc = await package.GetServiceAsync(typeof(IVsMonitorSelection)) as IVsMonitorSelection;
 
-            int cookieResult = svc.GetCmdUIContextCookie(PackageGuids.TrioSolutionContext, out uint cookie);
+            int cookieResult = svc.GetCmdUIContextCookie(PackageGuids.CustomContext, out uint cookie);
             ErrorHandler.ThrowOnFailure(cookieResult);
 
             svc.IsCmdUIContextActive(cookie, out var result);

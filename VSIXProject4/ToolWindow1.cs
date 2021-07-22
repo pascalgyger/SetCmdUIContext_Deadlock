@@ -15,7 +15,7 @@ namespace VSIXProject4
     /// implementation of the IVsUIElementPane interface.
     /// </para>
     /// </remarks>
-    [Guid("7992b0f1-ce8a-492a-bdca-b15362f11d63")]
+    [Guid("7992b0f1-ce8a-492a-bdca-b15362f11d64")]
     public class ToolWindow1 : ToolWindowPane
     {
         /// <summary>

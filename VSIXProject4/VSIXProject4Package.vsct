@@ -67,7 +67,7 @@
     <GuidSymbol name="guidVSIXProject4Package" value="{51b91bcc-a22a-4efd-a699-47b3e68f5923}" />
 
 
-    <GuidSymbol name="TrioSolutionContext" value="{54C240F4-5AC2-42C8-839E-E4CC6EF32EBC}"/>
+    <GuidSymbol name="CustomContext" value="{B45C8ED5-456D-4EAF-9BD8-AFF6E3C6881A}"/>
 
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidVSIXProject4PackageCmdSet" value="{b6d9ba2c-139e-43d1-9a8e-60abb2137aa6}">

@@ -15,8 +15,8 @@ namespace VSIXProject4
         public const string guidVSIXProject4PackageString = "51b91bcc-a22a-4efd-a699-47b3e68f5923";
         public static Guid guidVSIXProject4Package = new Guid(guidVSIXProject4PackageString);
 
-        public const string TrioSolutionContextString = "54c240f4-5ac2-42c8-839e-e4cc6ef32ebc";
-        public static Guid TrioSolutionContext = new Guid(TrioSolutionContextString);
+        public const string CustomContextString = "b45c8ed5-456d-4eaf-9bd8-aff6e3c6881a";
+        public static Guid CustomContext = new Guid(CustomContextString);
 
         public const string guidVSIXProject4PackageCmdSetString = "b6d9ba2c-139e-43d1-9a8e-60abb2137aa6";
         public static Guid guidVSIXProject4PackageCmdSet = new Guid(guidVSIXProject4PackageCmdSetString);
